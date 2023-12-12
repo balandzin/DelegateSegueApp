@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DelegateSegueApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="DelegateSegueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,10 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Button">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcx-rh-AEi"/>
+                                    <segue destination="XjQ-9z-gho" kind="show" id="slW-kz-6Z9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,21 +43,25 @@
                             <constraint firstItem="cZY-At-gw7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="sDc-aD-qiK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingTextField" destination="cZY-At-gw7" id="ju1-Sj-JkI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="86" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="xJM-Wu-fsa">
             <objects>
-                <viewController id="XjQ-9z-gho" sceneMemberID="viewController">
+                <viewController id="XjQ-9z-gho" customClass="SecondViewController" customModule="DelegateSegueApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="meV-U5-meh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gTP-VU-Pbo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MNj-c1-34Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSz-RM-330" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
