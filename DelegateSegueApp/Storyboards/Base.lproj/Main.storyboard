@@ -66,18 +66,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAJ-lG-zv5">
+                                <rect key="frame" x="16" y="491" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTP-VU-Pbo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTP-VU-Pbo" firstAttribute="trailing" secondItem="5uF-Ay-JPV" secondAttribute="trailing" constant="16" id="4n4-qz-vas"/>
                             <constraint firstItem="5uF-Ay-JPV" firstAttribute="centerY" secondItem="meV-U5-meh" secondAttribute="centerY" id="BVI-bu-ufa"/>
+                            <constraint firstItem="iAJ-lG-zv5" firstAttribute="top" secondItem="5uF-Ay-JPV" secondAttribute="bottom" constant="44" id="Bcd-dY-c2O"/>
                             <constraint firstItem="5uF-Ay-JPV" firstAttribute="centerX" secondItem="meV-U5-meh" secondAttribute="centerX" id="GIe-Qe-oAd"/>
+                            <constraint firstItem="iAJ-lG-zv5" firstAttribute="leading" secondItem="gTP-VU-Pbo" secondAttribute="leading" constant="16" id="adc-kV-7ZV"/>
+                            <constraint firstItem="gTP-VU-Pbo" firstAttribute="trailing" secondItem="iAJ-lG-zv5" secondAttribute="trailing" constant="16" id="glM-Ai-4Wa"/>
                             <constraint firstItem="5uF-Ay-JPV" firstAttribute="leading" secondItem="gTP-VU-Pbo" secondAttribute="leading" constant="16" id="lDl-Q5-jQ6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MNj-c1-34Z"/>
                     <connections>
+                        <outlet property="answerTextField" destination="iAJ-lG-zv5" id="vvO-fP-zxs"/>
                         <outlet property="label" destination="5uF-Ay-JPV" id="fV7-Ep-jgD"/>
                     </connections>
                 </viewController>
