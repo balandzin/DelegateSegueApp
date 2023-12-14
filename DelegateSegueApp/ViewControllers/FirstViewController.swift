@@ -11,11 +11,16 @@ class FirstViewController: UIViewController {
 
     @IBOutlet var greetingTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let secondVC = segue.destination as? SecondViewController else { return }
+        
+        secondVC.greeting = greetingTextField.text ?? "Текст не введен"
+    }
     
     @IBAction func buttonAction() {
         
